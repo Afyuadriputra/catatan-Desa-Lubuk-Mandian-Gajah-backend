@@ -1,0 +1,207 @@
+{
+  "main": {
+    "id": "7dd4fb8dfb077d1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "383516e08a1477c9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4506b41f7e45e96",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1fb4bd3b8a9c38e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "1a5ef1972f6c9c22",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c0d97453d7eac0bf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "09700789d5eaa1d1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "52f2954fbbd015b0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "059ff182a36c8e4f",
+    "type": "split",
+    "children": [
+      {
+        "id": "47678b6cd29c06d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "787e46c61535eefb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "33828140ef428a7c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "d16e3869a1479edc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "fe991c8f6e9a56eb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "1a8fe19ea21a6b86",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "c4506b41f7e45e96",
+  "lastOpenFiles": [
+    "00 - PRD Desa Mandian Gajah.md",
+    "arsitektur/pengaduan_warga_urls.py.md",
+    "07 - Modul Pengaduan Warga.md",
+    "arsitektur/Arsitektur-Backend.md.md",
+    "09 - API Endpoint Plan.md",
+    "11 - Access Matrix.md",
+    "12 - Non-Functional Requirements.md",
+    "13 - User Flows.md",
+    "Untitled/Untitled.md",
+    "arsitektur",
+    "Untitled.canvas",
+    "2026-04-15.md",
+    "01 - Backend Architecture.md",
+    "2026-04-14.md",
+    "04 - Modul Publikasi Informasi.md",
+    "05 - Modul Potensi Ekonomi.md",
+    "10 - Backend Roadmap.md",
+    "08 - Database Schema.md",
+    "06 - Modul Layanan Administrasi.md",
+    "03 - Modul Profil Wilayah.md",
+    "02 - Modul Auth Warga.md",
+    "Untitled.base",
+    "Welcome.md",
+    "Untitled 1"
+  ]
+}
