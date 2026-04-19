@@ -33,13 +33,12 @@ Lihat: [[08 - Database Schema]]
 - `RESOLVED`
 - `CLOSED`
 
-## Endpoint kandidat
+## Endpoint aktual
 
-- `POST /api/pengaduan`
-- `GET /api/pengaduan`
-- `GET /api/pengaduan/{id}`
-- `PATCH /api/pengaduan/{id}/status`
-- `GET /api/pengaduan/{id}/history`
+- `POST /api/v1/pengaduan/mvp/buat`
+- `GET /api/v1/pengaduan/mvp`
+- `GET /api/v1/pengaduan/mvp/{pengaduan_id}`
+- `POST /api/v1/pengaduan/mvp/{pengaduan_id}/proses`
 
 ## Dependensi
 
@@ -53,3 +52,4 @@ Lihat: [[08 - Database Schema]]
 - Foto bukti opsional
 - Kategori dan deskripsi minimum wajib
 - Admin wajib beri catatan saat status `RESOLVED` atau `CLOSED`
+- Riwayat tindak lanjut tersimpan

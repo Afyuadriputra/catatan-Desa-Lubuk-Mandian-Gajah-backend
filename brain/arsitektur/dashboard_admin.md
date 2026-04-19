@@ -38,6 +38,51 @@ aliases:
 - `content_health`
 - `master_health`
 
+## Fitur operasional yang sudah aktif
+
+- summary operasional surat / pengaduan / warga / unit published
+- queue surat dan pengaduan dengan filter `scope/status/aging`
+- recent activity:
+  - surat
+  - pengaduan
+  - publikasi
+  - auth
+  - homepage
+- analytics surat:
+  - by status
+  - by jenis
+  - trend
+  - average completion
+  - missing nomor / PDF
+  - rejection reasons
+- analytics pengaduan:
+  - by status
+  - by kategori
+  - trend
+  - average first response
+  - average resolved
+  - oldest active
+- content health:
+  - draft publikasi
+  - unpublished unit
+  - unpublished perangkat
+  - homepage completeness
+  - important missing homepage sections
+- master health:
+  - dusun
+  - perangkat
+  - profile completeness
+  - user active/inactive
+  - role counts
+- quick actions:
+  - surat pending
+  - pengaduan aktif
+  - buat publikasi
+  - kelola homepage
+  - tambah dusun
+  - tambah perangkat
+  - kelola unit usaha
+
 ## Karakter arsitektur
 
 - consume data dari modul lain
@@ -55,6 +100,7 @@ aliases:
 - [[potensi_ekonomi]]
 - [[profil_wilayah]]
 - [[auth_warga]]
+- [[homepage_konten]]
 
 ## Catatan
 

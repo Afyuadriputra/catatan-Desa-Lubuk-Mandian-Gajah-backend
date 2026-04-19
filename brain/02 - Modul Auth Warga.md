@@ -60,6 +60,7 @@ Lihat: [[08 - Database Schema]]
 - `POST /api/auth/login/`
 - `POST /api/auth/logout/`
 - `GET /api/auth/me/`
+- `POST /api/auth/change-password/`
 - `POST /api/auth/users/warga/create/`
 - `POST /api/auth/users/admin/create/`
 - `POST /api/auth/users/{user_id}/activate/`
@@ -88,7 +89,7 @@ Lihat: [[09 - API Endpoint Plan]]
 > Modul ini pakai service layer dengan disiplin cukup baik. View tipis, rule inti di domain/service, query di repository.
 
 > [!warning]
-> Implementasi sekarang belum punya `change-password` dan belum expose list user admin seperti plan awal.
+> Implementasi sekarang sudah punya `change-password`, tapi belum expose list user admin/warga penuh seperti panel user management lengkap.
 
 ## Hak akses
 

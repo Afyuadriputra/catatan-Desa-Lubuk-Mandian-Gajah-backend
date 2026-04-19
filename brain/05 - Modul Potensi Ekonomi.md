@@ -7,7 +7,7 @@ status: linked_to_code
 
 Tags: #feature #bumdes #wisata
 
-Etalase usaha desa, koperasi, wisata.
+Etalase unit usaha desa dan wisata dalam satu model/domain operasional.
 
 ## Scope
 
@@ -21,8 +21,7 @@ Etalase usaha desa, koperasi, wisata.
 
 ## Entity utama
 
-- `UnitUsaha`
-- `Wisata` atau `UnitUsaha` dengan kategori
+- `BumdesUnitUsaha`
 
 Lihat: [[08 - Database Schema]]
 
@@ -32,13 +31,14 @@ Lihat: [[08 - Database Schema]]
 - `WISATA`
 - `JASA`
 
-## Endpoint kandidat
+## Endpoint aktual
 
-- `GET /api/unit-usaha`
-- `GET /api/unit-usaha/{id}`
-- `POST /api/unit-usaha`
-- `PUT /api/unit-usaha/{id}`
-- `DELETE /api/unit-usaha/{id}`
+- `GET /api/v1/potensi-ekonomi/katalog`
+- `GET /api/v1/potensi-ekonomi/{unit_id}`
+- `GET /api/v1/potensi-ekonomi/admin/list`
+- `POST /api/v1/potensi-ekonomi/admin/buat`
+- `PUT /api/v1/potensi-ekonomi/admin/{unit_id}`
+- `DELETE /api/v1/potensi-ekonomi/admin/{unit_id}`
 
 ## Aktor
 
@@ -54,3 +54,10 @@ Lihat: [[08 - Database Schema]]
 
 - Hanya Super Admin, Admin Desa, Admin BUMDes bisa kelola
 - Hanya data `aktif/publish` tampil ke publik
+- Upload gambar divalidasi
+- Konten deskripsi/fasilitas disanitasi
+
+## Status implementasi
+
+> [!success]
+> CRUD admin, katalog publik, publish/unpublish, validasi upload, sanitasi konten sudah aktif.

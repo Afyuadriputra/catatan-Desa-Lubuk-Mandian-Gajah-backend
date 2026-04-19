@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "383516e08a1477c9",
+        "id": "33f4a50ff3150f1c",
         "type": "tabs",
         "children": [
           {
-            "id": "c4506b41f7e45e96",
+            "id": "49dece62942711d3",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -74,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "059ff182a36c8e4f",
@@ -177,8 +176,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "c4506b41f7e45e96",
+  "active": "49dece62942711d3",
   "lastOpenFiles": [
+    "17 - Homepage Frontend Dynamic Review.md",
     "00 - PRD Desa Mandian Gajah.md",
     "arsitektur/pengaduan_warga_urls.py.md",
     "07 - Modul Pengaduan Warga.md",

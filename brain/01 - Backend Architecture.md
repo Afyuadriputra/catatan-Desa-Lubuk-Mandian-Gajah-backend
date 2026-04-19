@@ -86,6 +86,9 @@ flowchart TD
 - [[05 - Modul Potensi Ekonomi]]
 - [[06 - Modul Layanan Administrasi]]
 - [[07 - Modul Pengaduan Warga]]
+- [[16 - Modul Homepage Konten]]
+- `homepage_konten` = konten editorial homepage + endpoint agregat publik
+- `dashboard_admin` = agregasi operasional + health monitoring + quick actions
 
 ## Shared concern
 
@@ -99,7 +102,12 @@ flowchart TD
 ## Kondisi implementasi saat ini
 
 - `auth_warga` = modul paling matang, sudah punya domain, repo, service, view, permission, tests
-- Modul lain masih dominan scaffold / placeholder
+- `homepage_konten` sudah aktif untuk homepage dinamis
+- `dashboard_admin` sudah baca `homepage_konten` untuk:
+  - content health
+  - recent activity
+  - completeness score
+  - quick action
 - `toolbox/` sudah dipakai nyata untuk logging, audit, request context, auth helper, permission helper
 
 ## Prinsip implementasi

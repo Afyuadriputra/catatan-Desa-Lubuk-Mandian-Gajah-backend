@@ -11,89 +11,83 @@ status: active
 
 # API Endpoint Plan
 
-Ringkasan endpoint backend. Dibagi dua: endpoint aktual vs endpoint target.
+Ringkasan endpoint backend. Fokus note ini sekarang: endpoint aktual utama yang benar-benar sudah hidup.
 
 ## Auth: endpoint aktual
 
-- `POST /api/auth/login/`
-- `POST /api/auth/logout/`
-- `GET /api/auth/me/`
-- `POST /api/auth/users/warga/create/`
-- `POST /api/auth/users/admin/create/`
-- `POST /api/auth/users/{user_id}/activate/`
-- `POST /api/auth/users/{user_id}/deactivate/`
-
-## Auth: endpoint target berikutnya
-
-- `POST /api/auth/change-password/`
-- `GET /api/auth/users/`
-- `GET /api/auth/users/{id}/`
+- `POST /api/v1/auth/login`
+- `POST /api/v1/auth/logout`
+- `GET /api/v1/auth/me`
+- `POST /api/v1/auth/change-password`
+- `POST /api/v1/auth/users/warga/create`
+- `POST /api/v1/auth/users/admin/create`
+- `POST /api/v1/auth/users/{user_id}/activate`
+- `POST /api/v1/auth/users/{user_id}/deactivate`
 
 ## Prefix route modul yang sudah diregistrasi
 
-- `/api/auth/`
-- `/api/layanan-administrasi/`
-- `/api/pengaduan/`
-- `/api/potensi-ekonomi/`
-- `/api/profil-wilayah/`
-- `/api/publikasi/`
+- `/api/v1/auth`
+- `/api/v1/dashboard-admin`
+- `/api/v1/homepage`
+- `/api/v1/layanan-administrasi`
+- `/api/v1/pengaduan`
+- `/api/v1/potensi-ekonomi`
+- `/api/v1/profil-wilayah`
+- `/api/v1/publikasi`
 
-## Modul lain
+## Homepage: endpoint aktual
 
-Saat ini route modul lain sudah di-include di `core_django.urls`, tapi mayoritas fitur masih scaffold. Jadi daftar endpoint detail di bawah ini masih status target desain.
+- `GET /api/v1/homepage`
+- `GET /api/v1/homepage/admin/content`
+- `PUT /api/v1/homepage/admin/content`
+- CRUD child item untuk:
+  - `culture-cards`
+  - `recovery-items`
+  - `potential-opportunities`
+  - `facilities`
+  - `gallery`
+  - `footer-links`
 
-## Profil Wilayah: target
+## Dashboard Admin: endpoint aktual
 
-- `GET /api/profil-wilayah/dusun/`
-- `POST /api/profil-wilayah/dusun/`
-- `GET /api/profil-wilayah/perangkat/`
-- `POST /api/profil-wilayah/perangkat/`
-- `GET /api/profil-wilayah/profil-desa/`
-- `PUT /api/profil-wilayah/profil-desa/`
+- `GET /api/v1/dashboard-admin/overview`
+- `GET /api/v1/dashboard-admin/surat-queue`
+- `GET /api/v1/dashboard-admin/pengaduan-queue`
+- `GET /api/v1/dashboard-admin/recent-activity`
+- `GET /api/v1/dashboard-admin/surat-analytics`
+- `GET /api/v1/dashboard-admin/pengaduan-analytics`
+- `GET /api/v1/dashboard-admin/content-health`
+- `GET /api/v1/dashboard-admin/master-health`
 
-## Publikasi: target
+## Modul inti lain: endpoint aktual ringkas
 
-- `GET /api/publikasi/berita/`
-- `GET /api/publikasi/berita/{id}/`
-- `POST /api/publikasi/berita/`
-- `PUT /api/publikasi/berita/{id}/`
-- `DELETE /api/publikasi/berita/{id}/`
-- `GET /api/publikasi/pengumuman/`
-- `GET /api/publikasi/pengumuman/{id}/`
-- `POST /api/publikasi/pengumuman/`
-- `PUT /api/publikasi/pengumuman/{id}/`
-- `DELETE /api/publikasi/pengumuman/{id}/`
-
-## Potensi Ekonomi: target
-
-- `GET /api/potensi-ekonomi/unit-usaha/`
-- `GET /api/potensi-ekonomi/unit-usaha/{id}/`
-- `POST /api/potensi-ekonomi/unit-usaha/`
-- `PUT /api/potensi-ekonomi/unit-usaha/{id}/`
-- `DELETE /api/potensi-ekonomi/unit-usaha/{id}/`
-
-## Layanan Administrasi: target
-
-- `POST /api/layanan-administrasi/surat/`
-- `GET /api/layanan-administrasi/surat/`
-- `GET /api/layanan-administrasi/surat/{id}/`
-- `PATCH /api/layanan-administrasi/surat/{id}/status/`
-- `GET /api/layanan-administrasi/surat/{id}/pdf/`
-- `GET /api/layanan-administrasi/surat/{id}/history/`
-
-## Pengaduan: target
-
-- `POST /api/pengaduan/`
-- `GET /api/pengaduan/`
-- `GET /api/pengaduan/{id}/`
-- `PATCH /api/pengaduan/{id}/status/`
-- `GET /api/pengaduan/{id}/history/`
+- Profil wilayah:
+  - publik profil desa
+  - CRUD dusun
+  - CRUD perangkat
+  - update profil desa
+- Publikasi:
+  - list/detail publik
+  - create/update/delete admin
+  - ubah status publish
+- Layanan administrasi:
+  - ajukan surat
+  - list/detail surat
+  - proses status
+  - download PDF
+- Pengaduan:
+  - buat pengaduan
+  - list/detail pengaduan
+  - proses status
+- Potensi ekonomi:
+  - katalog/detail publik
+  - list admin
+  - create/update/delete admin
 
 ## Catatan
 
-- Endpoint admin dan publik perlu pisah permission
-- Implementasi sekarang pakai Django view + `JsonResponse`, belum Django Ninja
-- Kalau nanti pindah ke Django Ninja, note ini perlu revisi lagi
+- Endpoint admin dan publik dipisah permission
+- Implementasi aktual sudah pakai Django Ninja
 - Semua endpoint kembali ke modul:
   - [[02 - Modul Auth Warga]]
   - [[03 - Modul Profil Wilayah]]
@@ -101,3 +95,4 @@ Saat ini route modul lain sudah di-include di `core_django.urls`, tapi mayoritas
   - [[05 - Modul Potensi Ekonomi]]
   - [[06 - Modul Layanan Administrasi]]
   - [[07 - Modul Pengaduan Warga]]
+  - [[16 - Modul Homepage Konten]]

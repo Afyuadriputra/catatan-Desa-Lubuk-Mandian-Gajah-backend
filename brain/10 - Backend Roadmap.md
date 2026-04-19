@@ -35,6 +35,16 @@ Urutan bangun backend dari hasil mapping.
 - Modul Potensi Ekonomi
 - Katalog BUMDes dan wisata
 
+## Sprint 6
+
+- Modul `homepage_konten`
+- Endpoint agregat `GET /api/v1/homepage`
+- Integrasi ringan ke `dashboard_admin`
+  - content health
+  - recent activity
+  - quick action
+  - completeness score
+
 ## Hardening
 
 - Audit log
@@ -47,9 +57,9 @@ Urutan bangun backend dari hasil mapping.
 
 - Notifikasi WhatsApp/email
 - QR verification surat
-- Statistik pengaduan
 - Multi-template surat
 - Dashboard performa perangkat
+- Dashboard analitik phase 2 lebih dalam
 
 ## Relasi
 
@@ -58,3 +68,6 @@ Urutan bangun backend dari hasil mapping.
 - Interface dari [[09 - API Endpoint Plan]]
 - Hak akses dari [[11 - Access Matrix]]
 - Flow dari [[13 - User Flows]]
+- Homepage data dari [[14 - Homepage Data Mapping]]
+- Dynamic homepage dari [[15 - Homepage Dynamic Backend Feature Plan]]
+- Modul homepage dari [[16 - Modul Homepage Konten]]

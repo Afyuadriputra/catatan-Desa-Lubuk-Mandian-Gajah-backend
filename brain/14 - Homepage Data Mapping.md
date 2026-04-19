@@ -85,11 +85,19 @@ Rekomendasi owner:
 | `peatDescription` | `homepage_konten` | Section landing page |
 | `peatQuote` | `homepage_konten` | Copywriting |
 | `peatImages` | `homepage_konten` | Gallery section |
+| `recoveryTitle` | `homepage_konten` | Intro title section recovery |
+| `recoveryDescription` | `homepage_konten` | Intro copy section recovery |
 | `recoveryItems` | `homepage_konten` | Storytelling blocks |
+| `potentialTitle` | `homepage_konten` | Intro title section potensi |
 | `potentialOpportunityItems` | `homepage_konten` | Opportunity cards, bukan data unit usaha mentah |
+| `potentialOpportunitiesTitle` | `homepage_konten` | Title blok opportunity |
 | `facilitiesTitle` | `homepage_konten` | Section title |
 | `facilities` | `homepage_konten` atau feature baru fasilitas | Sekarang belum ada feature fasilitas |
+| `galleryTitle` | `homepage_konten` | Intro title galeri |
+| `galleryDescription` | `homepage_konten` | Intro copy galeri |
 | `gallery` | `homepage_konten` | Gallery landing page |
+| `contactTitle` | `homepage_konten` | Intro title kontak homepage |
+| `contactDescription` | `homepage_konten` | Intro copy kontak homepage |
 | `footerLinks` | `homepage_konten` | Konfigurasi navigasi website |
 | `footerDescription` | `homepage_konten` | Copywriting |
 | `officeHours` | `homepage_konten` atau `[[profil_wilayah]]` | Jika jam layanan resmi, bisa masuk profil desa |
@@ -206,6 +214,12 @@ Ini cocok kalau migrasi bertahap.
 - buat endpoint agregat `homepage`
 - frontend tidak lagi konsumsi static file penuh
 
+> [!success]
+> Status aktual:
+> - endpoint agregat `GET /api/v1/homepage` sudah aktif
+> - frontend homepage sudah dynamic-first via `homepageApi.getPublic()`
+> - `homepage.data.ts` sekarang tinggal fallback/seed transisi
+
 ## Keputusan praktis
 
 > [!success]
@@ -218,6 +232,26 @@ Ini cocok kalau migrasi bertahap.
 >   - `[[potensi_ekonomi]]`
 >   - `[[publikasi_informasi]]`
 >   - `homepage_konten` sebagai feature baru
+
+## Status implementasi aktual
+
+> [!success]
+> Mapping ini sudah direalisasikan di backend.
+
+- `homepage_konten` sudah aktif
+- endpoint publik `GET /api/v1/homepage` sudah aktif
+- admin endpoint untuk kelola homepage sudah aktif
+- `dashboard_admin` sudah baca status `homepage_konten`
+- frontend page `/` sudah pakai API homepage sebagai source utama
+- scalar editorial intro tambahan sudah aktif di backend:
+  - `recoveryTitle`
+  - `recoveryDescription`
+  - `potentialTitle`
+  - `potentialOpportunitiesTitle`
+  - `galleryTitle`
+  - `galleryDescription`
+  - `contactTitle`
+  - `contactDescription`
 
 ## Referensi
 
